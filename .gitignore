@@ -1,0 +1,7 @@
+.venv/
+dist/
+users.json
+portfolios.json
+rates.json 
+data/
+__pycache__

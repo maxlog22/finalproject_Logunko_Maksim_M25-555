@@ -1,0 +1,36 @@
+[project]
+name = "finalproject-logunko-maksim-m25-555"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Maksim"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+ packages = [
+     { include = "valutatrade_hub" },
+ ]
+ 
+[tool.poetry.scripts]
+project = "valutatrade_hub.main:main"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+exclude = ["venv", ".venv", "dist", "__pycache__"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
+[dependency-groups]
+dev = [
+    "ruff (>=0.14.10,<0.15.0)"
+]
