@@ -4,4 +4,9 @@ users.json
 portfolios.json
 rates.json 
 data/
-__pycache__
+__pycache__/
+rates.json
+exchange_rates.json
+logs/
+valutatrade_hub/data/
+valutatrade_hub/__pycache__/

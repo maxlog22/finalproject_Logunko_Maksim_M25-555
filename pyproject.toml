@@ -20,7 +20,7 @@ build-backend = "poetry.core.masonry.api"
  ]
  
 [tool.poetry.scripts]
-project = "valutatrade_hub.main:main"
+valutatrade = "valutatrade_hub.main:main"
 
 [tool.ruff]
 line-length = 88
@@ -34,3 +34,31 @@ ignore = []
 dev = [
     "ruff (>=0.14.10,<0.15.0)"
 ]
+
+[tool.valutatrade]
+# Пути к данным
+data_dir = "data"
+log_dir = "logs"
+
+# Настройки курсов валют
+rates_ttl_seconds = 300  # 5 минут
+default_base_currency = "USD"
+
+# Настройки логирования
+log_file = "actions.log"
+log_level = "INFO"
+log_format = "detailed"  # detailed или json
+log_max_size_mb = 10
+log_backup_count = 5
+
+# Настройки приложения
+initial_usd_balance = 1000.0
+
+# Настройки парсера
+parser_update_interval = 300  # 5 минут в секундах
+parser_log_file = "parser.log"
+parser_log_level = "INFO"
+
+# API ключи (в продакшене используйте переменные окружения)
+exchangerate_api_key = "c9e445b3a03e91c0ed51a1c6"
+
